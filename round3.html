@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Flight Tournament</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="round1.html">Round 1</a></li>
+                    <li><a href="round2.html">Round 2</a></li>
+                    <li><a href="round3.html">Round 3</a></li>
+                    <li><a href="result.html">Final Result</a></li>
+                </ul>
+            </nav>
+            <h1>Flight Tournament</h1>
+        </header>
+        <main>
+            <section>
+                <h2>
+                    The remaining 13 Candidates:
+                </h2>
+                <ol>
+                    <li><strong>Air China</strong>: CA 919/923/929</li>
+                    <li><strong>All Nippon Airways:</strong> NH 920/968</li>
+                    <li><strong>China Eastern:</strong> MU 523/537</li>
+                    <li><strong>China Southern:</strong> CZ 8309</li>
+                    <li><strong>Jetstar Japan:</strong> JQ 36</li>
+                    <li><strong>Juneyao Airlines:</strong> HO 1385</li>
+                    <li><strong>Peach Aviation:</strong> MM 898</li>
+                    <li><strong>Shanghai Airlines:</strong> FM 815</li>
+                    <li><strong>Spring Airlines:</strong> 9C 6217</li>
+                </ol>
+            </section>
+            <section>
+                <h2>General Info</h2>
+                <p>In this round, we do more calculations to figure out which specific flight is the best among all candidates. Instead of comparing
+                    two or three flights to weed out a candidate that is totally unqualified, we weight a few factors and establish our own grading citeria.
+                    That is, we grade each flight. Flight receiving the highest score would be the final winner of our tournament, though whether this final winner 
+                    would necessarily be the best flight among all candidates still needs to be justified (This will be further analyzed in the last section of our 
+                    final round).
+                </p>
+                <p>A list of factors would be put into consideration. They are:
+                    <ul>
+                        <li><strong>Fare: 30%</strong> </li>
+                        <li><strong>Seat Pitch: 13%</strong></li>
+                        <li><strong>Departure Time: 10%</strong></li>
+                        <li><strong>Airline rating (combined with number of ratings): 8%</strong></li>
+                        <li><strong>Seat width: 5%</strong></li>
+                        <li><strong>Delay Rate: 34%</strong>
+                        <ol>
+                            <li>Around 15 mins: 2%</li>
+                            <li>Around 30 mins: 12%</li>
+                            <li>45 mins or more: 20%</li>
+                        </ol>
+                    </ul>
+                    Noticeably, <strong>Airline rating</strong> appears on the list, which is different from the rating of specific flights considered in the second around.
+                    And we accordingly gives a comparatively low weight for it is a highly subjective and hence unreliable factor. In contrast, 
+                    <strong>Fare</strong>, <strong>Seat Pitch</strong>, and <strong>Delay rate</strong> in general have high weights. They are those factors that we 
+                    consider reliable and objective.
+                </p>
+            </section>
+            <section>
+                <h2>Grading Criterias</h2>
+                <p>For each factor, we establish a grading criteria. Most of them are not linear for we want to make adjustments if needed. For example, flights with a
+                    comparatively high delay rate (say, more than 20%) around 15 mins receive a comparatively higher grade, whereas flights with a comparatively low delay
+                    rate (say, around 10%) around 45 mins or more receive very low grades. The followings present all seven criterias we have.
+                </p>
+                <h3 style="text-align: center;">Seats</h3>
+                <div class="flex">
+                    <img src="img/Seat Pitch.png" alt="seat pitch">
+                    <img src="img/Seat Width.png" alt="seat pitch">
+                </div>
+                <h3 style="text-align: center;">Departure Time and Fares</h3>
+                <div class="flex">
+                    <img src="img/Departure Time.png" alt="Departure Time">
+                    <img src="img/Fare.png" alt="Fare">
+                </div>
+                <h3 style="text-align: center;">Airline Ratings</h3>
+                <div class="flex">
+                    <img src="img/Rating of Airline.png" alt="Departure Time">
+                </div>
+                <h3 style="text-align: center;">Delay Rates</h3>
+                <img src="img/Around 15 mins.png" alt="15 mins">
+                <img src="img/Around 30 mins.png" alt="30 mins">
+                <img src="img/45 mins or more.png" alt="45 mins or more">
+            </section>
+            <section>
+                <h2>Round 3 result</h2>
+                <p1>We combined the weights of each factors and the seven grading criterias to grade each specific flight. The result is as follow:</p1>
+                <img src="img/Round3 Result.png" alt="Round3 result" class="center">
+                <h3 id="id">Air China CA923 is the winner!!!</h3>
+            </section>
+        </main>
+        <footer>
+            <p>Text and images created by Yecheng Li, Yuyi Pan, Zixiang Xu for DATA 100. Web page created by Yecheng Li, Yuyi Pan, Zixiang Xu.</p>
+        </footer>
+    </body>
+
+</html>

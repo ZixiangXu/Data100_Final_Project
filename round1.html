@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Flight Tournament</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="round1.html">Round 1</a></li>
+                    <li><a href="round2.html">Round 2</a></li>
+                    <li><a href="round3.html">Round 3</a></li>
+                    <li><a href="result.html">Final Result</a></li>
+                </ul>
+            </nav>
+            <h1>Flight Tournament</h1>
+        </header>
+        <main>
+            <p>
+                Round 1 is about the comparison within the same airline. The visualization below 
+                shows the fare range of the 10 airlines. The logic here is that we believe for the
+                same airline, many factors - which are hard to determine in other methods - such as
+                service and dining can be assumed identical, so only if one flight's other factors
+                are better than the others', their fares can differ a lot. Otherwise, the flight with 
+                higher fare will definitely be excluded.
+            </p>
+            <iframe title="" aria-label="Range Plot" id="datawrapper-chart-zW8vq" src="https://datawrapper.dwcdn.net/zW8vq/1/" scrolling="no" frameborder="0" style="width: 75%; min-width: 50% !important; border: none;" height="230" data-external="1" class="center"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+            <section>
+                <h2>Example: Filter the Shanghai Airline FM 895</h2>
+                <p>
+                    Shanghai Airline has the highest fare range, and it operates two flights - FM 815
+                    and FM 895 - per day. From the table below, we can clearly find that FM 895, which
+                    has a higher fare, only has a better departure time, for other factors, it is even
+                    worse than FM 815.
+                </p>
+                <img src="img/comparison_1.png" class="center">
+                <p>
+                    However, we believe that we still cannot filter FM 895 directly because every
+                    passenger has different considerations. Therefore, we find a third party - MU 521.
+                    This flight has extremely similar good departure time than FM 895, but its other
+                    data, including the fare, is better than, or at least the same as, FM 895. Hence,
+                    now we can definitely filter FM 895.  
+                </p>
+                <img src="img/comparison_2.png" class="center">
+            </section>
+            <section>
+                <h2>Round 1 Result</h2>
+                <p>
+                    Using the same method, we can also filter the flights FM 895, HO 1379, MU 271, MU 521,
+                    MU 727, CA 157, and JL 80, and the following remains in this tournament:
+                    <ul>
+                        <li>Air China: CA 919/923/929</li>
+                        <li>All Nippon Airways: NH 920/968</li>
+                        <li>China Eastern: MU 523/537/575</li>
+                        <li>China Southern: CZ 8309</li>
+                        <li>Japan Airlines: JL 82/86</li>
+                        <li>Jetstar Japan: JQ 36</li>
+                        <li>Juneyao Airlines: HO 1385</li>
+                        <li>Peach Aviation: MM 898</li>
+                        <li>Shanghai Airlines: FM 815</li>
+                        <li>Spring Airlines: 9C 6217</li>
+                    </ul>
+                </p>
+            </section>
+        </main>
+        <footer>
+            <p>Text and images created by Yecheng Li, Yuyi Pan, Zixiang Xu for DATA 100. Web page created by Yecheng Li, Yuyi Pan, Zixiang Xu.</p>
+        </footer>
+    </body>
+
+</html>

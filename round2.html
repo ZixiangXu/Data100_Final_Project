@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Flight Tournament</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="round1.html">Round 1</a></li>
+                    <li><a href="round2.html">Round 2</a></li>
+                    <li><a href="round3.html">Round 3</a></li>
+                    <li><a href="result.html">Final Result</a></li>
+                </ul>
+            </nav>
+            <h1>Flight Tournament</h1>
+        </header>
+        <main>
+            <p>Next, we move on to the second round, in which we will compare flights with similar ratings.</p>
+            <section>
+                <h2>Are flights with lower ratings necessarily worse?</h2>
+                <p>This is a scatterplot showing the relationship between the number of ratings of each flight and its corresponding rating.</p>
+                <iframe title="Flights with fewer ratings tend to have a lower score overall" aria-label="Scatter Plot" id="datawrapper-chart-yZRTf" src="https://datawrapper.dwcdn.net/yZRTf/2/" scrolling="no" frameborder="0" style="width: 60%; min-width: 50% !important; border: none;" height="451" data-external="1" class="center"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+                <p>The overall shape of the graph looks like a square root function. When there are only a few ratings, the ratings tend to be low. In other words, some low ratings may be biased, so flights with low ratings are not necessarily bad, which is why we don't use flights with fewer than 40 ratings in our comparison process.</p>
+            </section>
+            <section>
+                <h2>Is there a correlation between rating and fare?</h2>
+                <p>This is another scatterplot showing the relationship between the average ratings of each flight and their corresponding fare.</p>
+                <iframe title="" aria-label="Scatter Plot" id="datawrapper-chart-NiKbJ" src="https://datawrapper.dwcdn.net/NiKbJ/11/" scrolling="no" frameborder="0" style="width: 60%; min-width: 50% !important; border: none;" height="327" data-external="1" class="center"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+                <p>From this scatterplot, we know that there is a positive correlation between rating and fare, and we draw a trend line to describe this correlation. Here we have the equation of our trend line, and this equation will be very useful later on when we compare flights:</p>
+                <p>Y (fare) = 328.18X (X = rating) - 1061.2</p>
+            </section>
+            <section>
+                <h2>How do we filter our flights?</h2>
+                <p>Now we can filter our flights based on two factors: D and R. D is the price difference between the selected flight and the lowest fare flight of the same rating. R is the price difference between the selected flight and flight of the same rating estimated by the trend line. If the sum of D and R is greater than 125, we will eliminate the selected flight.</p>
+                <img src="img/Example_MU575.png" alt="scatterplot showing that MU575 should be eliminated due to high fare and low rating" class="center">
+                <p>We will use MU575 as an example. MU575 has a rating of 4.3. Among the flights with a same rating of 4.3, the flight with the lowest fare is MM898, so D is the price difference between MU575 and MM898, and our calculated result is 151. According to the equation of our trend line, the fare of the flights with 4.3 rating should be about 350 USD, so R is 430, which is the fare of MU575, minus 350, that is, 80. Now we add D and R together, and the sum is 231.03, which is greater than 125, so we eliminate MU575.</p>
+            </section>
+            <section>
+                <h2>Round 2 Result</h2>
+                <p>Using similar methods, we can create a result table and eliminate JL82 and JL86.</p>
+                <img src="img/Round_2_Result.png" alt="result table showing that JL82 and JL86 should be eliminated" class="center">
+                <p>Here are the candidates that are still in the tournament after round 2:</p>
+                    <ul>
+                        <li>Air China: CA 919/923/929</li>
+                        <li>All Nippon Airways: NH 920/968</li>
+                        <li>China Eastern: MU 523/537</li>
+                        <li>China Southern: CZ 8309</li>
+                        <li>Jetstar Japan: JQ 36</li>
+                        <li>Juneyao Airlines: HO 1385</li>
+                        <li>Peach Aviation: MM 898</li>
+                        <li>Shanghai Airlines: FM 815</li>
+                        <li>Spring Airlines: 9C 6217</li>
+                    </ul>
+            </section>
+        </main>
+        <footer>
+            <p>Text and images created by Yecheng Li, Yuyi Pan, Zixiang Xu for DATA 100. Web page created by Yecheng Li, Yuyi Pan, Zixiang Xu.</p>
+        </footer>
+    </body>
+
+</html>

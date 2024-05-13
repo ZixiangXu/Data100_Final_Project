@@ -1,0 +1,117 @@
+/* standard elements */
+html {
+    background-color: whitesmoke;
+    margin-left: 2em;
+    margin-right: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 120%
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: darkcyan;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+h2 {
+    color: darkblue;
+}
+
+footer {
+    margin-top: 3rem;
+    border-top: 0.1rem, solid, slategrey;
+    font-size: 0.8rem;
+}
+
+img {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+iframe {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+section, p {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+ul {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+ol {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+nav {
+    background-color: yellowgreen;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+nav ul li:hover {
+    background-color: lightskyblue;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:visited {
+    margin-top: 4rem;
+    border-top: 0.1rem, solid, slategrey;
+    font-size: 0.8rem;
+}
+
+#id {
+    background-color: yellow;
+    color: black;
+    padding: 10px;
+    text-align: left;
+}
+
+body {
+    background-image: url('img/background.jpeg');
+}
+
+.flex {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
